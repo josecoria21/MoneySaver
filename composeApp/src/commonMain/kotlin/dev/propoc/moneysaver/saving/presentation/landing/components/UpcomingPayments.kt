@@ -1,6 +1,5 @@
 package dev.propoc.moneysaver.saving.presentation.landing.components
 
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.*
@@ -9,11 +8,12 @@ import dev.propoc.moneysaver.saving.domain.model.UpcomingPayment
 
 @Composable
 fun UpcomingPayments(
+    modifier: Modifier = Modifier,
     upcomingPayments: List<UpcomingPayment>,
     onUpcomingPaymentClick: (UpcomingPayment) -> Unit
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize()
+        modifier = modifier
     ) {
         items(
             items = upcomingPayments,

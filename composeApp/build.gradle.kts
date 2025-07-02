@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.jetbrains.kotlin.serialization)
     alias(libs.plugins.ksp)
-//    alias(libs.plugins.room)
+    alias(libs.plugins.room)
 }
 
 kotlin {
@@ -28,6 +28,10 @@ kotlin {
             baseName = "ComposeApp"
             isStatic = true
         }
+    }
+
+    room {
+        schemaDirectory("$projectDir/schemas")
     }
     
     sourceSets {
@@ -64,6 +68,10 @@ kotlin {
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+        }
+
+        dependencies {
+            ksp(libs.androidx.room.compiler)
         }
     }
 }

@@ -22,6 +22,7 @@ fun UpcomingPaymentsDetailsScreenRoot(
         onAction = { action ->
             when(action) {
                 is UpcomingPaymentDetailsAction.OnBackClick -> onBackClick()
+                is UpcomingPaymentDetailsAction.onSaveClick -> {}
             }
         }
     )
