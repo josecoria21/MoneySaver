@@ -7,6 +7,7 @@ import dev.propoc.moneysaver.saving.data.database.UpcomingPaymentDatabase
 import dev.propoc.moneysaver.saving.domain.repository.DefaultSavingRepository
 import dev.propoc.moneysaver.saving.presentation.SelectedUpcomingPaymentViewModel
 import dev.propoc.moneysaver.saving.presentation.landing.LandingViewModel
+import dev.propoc.moneysaver.saving.presentation.upcoming_payment_details.UpcomingPaymentsDetailsViewModel
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
 import org.koin.core.module.dsl.viewModelOf
@@ -18,6 +19,7 @@ expect val platformModule: Module
 val sharedModule = module {
     viewModelOf(::LandingViewModel)
     viewModelOf(::SelectedUpcomingPaymentViewModel)
+    viewModelOf(::UpcomingPaymentsDetailsViewModel)
 
     singleOf(::DefaultSavingRepositoryImpl).bind<DefaultSavingRepository>()
 

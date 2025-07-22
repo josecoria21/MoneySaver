@@ -23,6 +23,7 @@ fun UpcomingPaymentsDetailsScreenRoot(
             when(action) {
                 is UpcomingPaymentDetailsAction.OnBackClick -> onBackClick()
                 is UpcomingPaymentDetailsAction.onSaveClick -> {}
+                is UpcomingPaymentDetailsAction.OnSelectedUpcomingPaymentChange -> TODO()
             }
         }
     )
