@@ -43,7 +43,7 @@ fun App() {
                         onUpcomingPaymentClick = { upcomingPayment ->
                             selectedUpcomingPaymentViewModel.onUpcomingPayment(upcomingPayment)
                             navController.navigate(
-                                Routes.UpcomingPaymentsDetails(upcomingPayment.id)
+                                Routes.UpcomingPaymentsDetails
                             )
                         }
                     )

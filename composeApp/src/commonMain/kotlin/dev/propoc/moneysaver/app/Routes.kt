@@ -11,5 +11,5 @@ sealed interface Routes {
     data object Landing: Routes
 
     @Serializable
-    data class UpcomingPaymentsDetails(val paymentId: String): Routes
+    data object UpcomingPaymentsDetails: Routes
 }

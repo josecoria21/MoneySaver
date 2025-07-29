@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 data class UpcomingPaymentEntity(
     @PrimaryKey(autoGenerate = false) val id: String,
     val date: String,
-    val amount: Int,
+    val amount: Double,
     val name: String,
 )
